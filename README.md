@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: https://jess-lsy.github.io/teach-PUI-2023S-jessica/index.html)
 
-Repository link: `add the URL to this repository`
+Repository link: https://jess-lsy.github.io/teach-PUI-2023S-jessica/
