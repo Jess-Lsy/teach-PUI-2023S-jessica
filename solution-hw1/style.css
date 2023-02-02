@@ -1,0 +1,147 @@
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin: 0px 0px 60px 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+img.thumbnail {
+    width: 400px;
+    height: auto;
+    outline: 3px solid black;
+    margin: 20px 0px;
+}
+
+img.detail-thumbnail {
+    width: 700px;
+    height: auto;
+    outline: 3px solid black;
+    margin: 20px 0px;
+}
+
+img.cart-option {
+    width: 100px;
+    height: auto;
+    outline: 3px solid black;
+    margin: 20px 0px;
+}
+
+img.logo {
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+}
+
+div.top{
+    border-bottom: 4px solid;
+}
+
+div.option{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    padding: 0px 0px 10px 0px;
+    margin: 10px;
+}
+
+div.cart-option{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 0px 0px 20px 0px;
+}
+
+div.end{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+    justify-content: center;
+    align-items:center;
+}
+
+div.selector{
+    margin: 20px 0px;
+}
+
+div.checkout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    border-top: 4px solid;
+    padding: 10px 0px;
+}
+
+h1{
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+p{
+    font-family: Roboto;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    max-width: 300px;
+    padding: 0px;
+    margin: 0px 0px;
+    justify-content: flex-start;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a.highlight:hover{
+    font-family: Roboto;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 5px 0px 0px 0px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    font-family: Roboto;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 5px 0px 0px 0px;
+    color: black;
+}
+
+select{
+    width: 300px;
+    border: 3px solid;
+    font-size: 24px;
+}
+
+button{
+    margin: 0px 10px;
+    padding: 10px 20px;
+    background-color: yellow;
+    border: 3px solid; 
+    font-size: 24px;
+}
