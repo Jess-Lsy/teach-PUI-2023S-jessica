@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <meta charset="UTF-8">
+        <title>
+            Product-detail-page
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100;1,200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+        <script defer src="app.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img class="logo" src="logo/logo-01.svg" /></a>
+            <div class="top">
+              <nav>
+                <ul>
+                  <li> <a href="index.html" class="highlight">PRODUCTS</a></li>
+                  <li> <a href="cart.html" class="highlight">CART</a></li>
+                </ul>
+              </nav>
+              <h1> Original cinnamon roll</h1>
+            </div>
+        </header>
+        <main>
+            <img class="detail-thumbnail" src="products/original-cinnamon-roll.jpg" />
+            <div class="detail-info">
+                <p>Customize our delicious, hand-made cinemmon roll to your liking!</p>
+                <div class="selector">
+                    <p>Glazing:</p>
+                    <select name="Glazing" id="Glazing"
+                            onchange="glazingChange(this)">
+                        <option value="0">Keep original</option>
+                        <option value="1">Sugar milk</option>
+                        <option value="2">Vanilla milk</option>
+                        <option value="3">Double chocolate</option>
+                    </select>
+                </div>  
+                <div class="selector">
+                    <p>Pack Size: </p>
+                    <select name="Pack-size" id="Pack-size"
+                            onchange="sizingChange(this)">
+                        <option value="0">1</option>
+                        <option value="1">3</option>
+                        <option value="2">6</option>
+                        <option value="3">12</option>
+                    </select>
+                </div>  
+                <div class="end">
+                    <p id="totalPrice"></p>
+                    <button type="button">Add to Cart</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
