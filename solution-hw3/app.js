@@ -1,74 +1,52 @@
-let glazes = [
-    {
-        name: 'Keep original',
-        price: 0.00,
-    },
-    {
-        name: 'Sugar milk',
-        price: 0.00,
-    },
-    {
-        name: 'Vanila milk',
-        price: 0.50,
-    },
-    {
-        name: 'Double chocolate',
-        price: 1.50,
-    }
-    ]
-    
-let packSize = [
-    {
-        size: 1,
-        adaptation: 1,
-    },
-    {
-        size: 3,
-        adaptation: 3,
-    },
-    {
-        size: 6,
-        adaptation: 5,
-    },
-    {
-        size: 12,
-        adaptation: 10,
-    }
-    ]
+const glazes ={
+    'Keep original': 0.00,
+    'Sugar milk': 0.00,
+    'Vanila milk': 0.50,
+    'Double chocolate': 1.50
+};
 
-let finalPrice = 2.49;
+const packSize = {
+    "1" : 1,
+    "3" : 3,
+    "6" : 5,
+    "12": 10
+};
 
-function glazingChange(){
-    const newPrice = this.value;
-    console.log("newPrice"+ newPrice);
-    let glazePrice = parseFloat(glazes[newPrice].price);
-    let size = parseInt(document.querySelector('#Pack-size').value);
-    console.log("glazePrice"+ glazePrice);
-    console.log("size"+ size);
+const basePrice = 2.49;
+let currGlazePrice = 0;
+let currPackPrice = 1;
 
-    for (let i = 0; i < size-1; i += 1) {
-        finalPrice += glazePrice;
-        console.log("price updating"+ finalPrice);
-    }
-    displayPrice(finalPrice);
+const glazeSelect = document.querySelector("select#Glazing");
+
+for (const [glazing,price] of Object.entries(glazes)){
+    const option = document.createElement("option");
+    option.textContent = glazing;
+    option.value = price;
+    glazeSelect.appendChild(option);
 }
 
-function sizeChange(element){
-    const size = element.value;
-    let glazeIndex = parseInt(document.querySelector("#Glazing").value);
-    let glazePrice = parseFloat(glazes[glazeIndex].price);
+const packSelect = document.querySelector("select#Pack-size");
 
-    for (let i = 0; i < size-1; i += 1) {
-        price += glazePrice;
-    }
-
-    displayPrice(price);
+for (const [pack,price] of Object.entries(packSize)){
+    const option = document.createElement("option");
+    option.textContent = pack;
+    option.value = price;
+    packSelect.appendChild(option);
 }
 
-function displayPrice(price){
-    let priceElement = document.querySelector('#totalPrice');
-    priceElement.innerHTML = '$' + (price).toFixed(2);
+function glazingChange(element){
+    currGlazePrice = parseFloat(element.value);
+    displayPrice();
 }
 
-glazingChange();
-sizeChange();
+function sizingChange(element){
+    currPackPrice = parseFloat(element.value);
+    displayPrice();
+}
+
+function displayPrice(){
+    const totalPrice = (basePrice + currGlazePrice) * currPackPrice;
+    const totalPriceField = document.querySelector("#totalPrice");
+    console.log(totalPrice);
+    totalPriceField.textContent = "$" + totalPrice.toFixed(2);
+}
