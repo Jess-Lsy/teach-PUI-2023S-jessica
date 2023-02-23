@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="style.css">
-        <script defer src="app.js"></script>
+        <script defer src="js/app.js"></script>
     </head>
     <body>
         <header>
@@ -23,11 +23,11 @@
                   <li> <a href="cart.html" class="highlight">CART</a></li>
                 </ul>
               </nav>
-              <h1> Original cinnamon roll</h1>
+              <h1 id = header> Original cinnamon roll</h1>
             </div>
         </header>
         <main>
-            <img class="detail-thumbnail" src="products/original-cinnamon-roll.jpg" />
+            <img id="detail-thumbnail" src="products/original-cinnamon-roll.jpg" />
             <div class="detail-info">
                 <p>Customize our delicious, hand-made cinemmon roll to your liking!</p>
                 <div class="selector">
@@ -44,7 +44,7 @@
                 </div>  
                 <div class="end">
                     <p id="totalPrice"></p>
-                    <button type="button">Add to Cart</button>
+                    <button type="button" id="addCart" onclick = "addRoll()">Add to Cart</button>
                 </div>
             </div>
         </main>
