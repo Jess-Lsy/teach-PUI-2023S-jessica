@@ -1,0 +1,215 @@
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    margin: 0px 0px 60px 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+main.cart{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+div.wrapper{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+img.thumbnail {
+    width: 300px;
+    height: auto;
+    outline: 2px solid black;
+    margin: 20px 0px;
+}
+
+img.detail-thumbnail {
+    width: 600px;
+    height: auto;
+    outline: 2px solid black;
+    margin: 0px 50px 0px 0px;
+}
+
+img.cart {
+    width: 100px;
+    height: auto;
+    outline: 2px solid black;
+    margin: 0px 0px;
+}
+
+img.logo {
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+}
+
+div.top{
+    width: 100%;
+}
+
+div.option{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 15px 10px 15px;
+    margin: 10px;
+}
+
+template.cart-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 0px;
+    gap: 30px;
+}
+
+div.item-info{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+div.item-price{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+div.price{
+    width: 77%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0px 50px 0px 0px;
+}
+
+div.end{
+    display: flex;
+    flex-direction: row;
+    margin: 80px 0px 0px 0px;
+    justify-content: center;
+    align-items:center;
+}
+
+div.selector{
+    margin: 0px;
+}
+
+div.checkout{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-top: 4px solid;
+    padding: 10px 0px;
+}
+
+div.detail-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+h1{
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+h2{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: underline;
+}
+
+p{
+    font-family: Roboto;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    max-width: 400px;
+    padding: 0px;
+    margin: 5px 0px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a.highlight:hover{
+    font-family: Roboto;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+nav{
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px 0px 30px 0px;
+    border-bottom: 4px solid;
+}
+
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    font-family: Roboto;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 5px 0px 0px 0px;
+    margin: 0px 50px 0px 0px;
+    color: black;
+}
+
+select{
+    width: 300px;
+    border: 3px solid;
+    font-size: 24px;
+}
+
+button{
+    margin: 0px 0px 0px 50px;
+    padding: 10px 20px;
+    background-color: yellow;
+    border: 3px solid; 
+    font-size: 24px;
+}
+
+button.checkout{
+    margin: 0px 50px 0px 20px;
+    padding: 10px 20px;
+    background-color: yellow;
+    border: 3px solid; 
+    font-size: 24px;
+}
