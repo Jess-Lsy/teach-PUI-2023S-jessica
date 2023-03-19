@@ -24,14 +24,6 @@ class Roll {
     }
 }
 
-// initialize the cart with 4 rolls
-function initializeCart() {
-    cartItems.push(new Roll("Original", "Sugar milk", 1, rolls["Original"]["basePrice"]));
-    cartItems.push(new Roll("Walnut", "Vanilla milk", 12, rolls["Walnut"]["basePrice"]));
-    cartItems.push(new Roll("Raisin", "Sugar milk", 3, rolls["Raisin"]["basePrice"]));
-    cartItems.push(new Roll("Apple", "Keep original", 3, rolls["Apple"]["basePrice"]));
-}
-
 // add a Roll instance to the DOM
 // also register a function to remove this roll when the "Remove" link is clicked
 function addRollToPage(roll) {
@@ -83,26 +75,23 @@ cartItems.forEach(addRollToPage);
 updateTotalPrice();
 
 function saveToLocalStorage() {
-    const cartArray = Array.from(cartItems);
-    console.log(cartArray);
-    
-    const cartArrayString = JSON.stringify(cartArray);
-    console.log(cartArrayString);
-  
-    localStorage.setItem('storedItems', cartArrayString);
+    if (localStorage.getItem("storedItems")){
+        cartItems = JSON.parse(localStorage.getItem("storedItems"));
+    }
+    const roll = new Roll(rollType, glazingOption, packOption, basePrice);
+	cart.push(roll);
+
+    const cartString = JSON.stringify(cartItems);
+    localStorage.setItem('storedItems', cartString);
+    console.log(localStorage);
   }
   
-  function retrieveFromLocalStorage() {
-    const cartArrayString = localStorage.getItem('storedItems');
-    const cartArray = JSON.parse(cartArrayString);
-    for (const cartData of cartArray) {
-        console.log(cartData);
-        const cartItem = addNewNote(cartData.noteImageURL, noteData.noteTitle,
-        noteData.noteBody);
-        createElement(cartItem);
+function retrieveFromLocalStorage() {
+    if (localStorage.getItem("storedItems")){
+        cartItems = JSON.parse(localStorage.getItem("storedRolls"));
     }
   }
   
-  if (localStorage.getItem('storedItems') != null) {
+if (localStorage.getItem('storedItems') != null) {
     retrieveFromLocalStorage();
   }

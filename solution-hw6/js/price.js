@@ -85,9 +85,3 @@ class Roll {
         this.basePrice = basePrice;
     }
 }
-
-function printCart() {
-	const roll = new Roll(rollType, glazingOption, packOption, basePrice);
-	cart.push(roll);
-	console.log(cart);
-}
