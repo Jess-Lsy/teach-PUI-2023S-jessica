@@ -81,3 +81,28 @@ function updateTotalPrice() {
 initializeCart();
 cartItems.forEach(addRollToPage);
 updateTotalPrice();
+
+function saveToLocalStorage() {
+    const cartArray = Array.from(cartItems);
+    console.log(cartArray);
+    
+    const cartArrayString = JSON.stringify(cartArray);
+    console.log(cartArrayString);
+  
+    localStorage.setItem('storedItems', cartArrayString);
+  }
+  
+  function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedItems');
+    const cartArray = JSON.parse(cartArrayString);
+    for (const cartData of cartArray) {
+        console.log(cartData);
+        const cartItem = addNewNote(cartData.noteImageURL, noteData.noteTitle,
+        noteData.noteBody);
+        createElement(cartItem);
+    }
+  }
+  
+  if (localStorage.getItem('storedItems') != null) {
+    retrieveFromLocalStorage();
+  }
