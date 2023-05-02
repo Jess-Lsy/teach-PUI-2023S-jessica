@@ -1,0 +1,130 @@
+body {
+    background-color: black;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  nav ul li {
+    padding: 5px 10px;
+  }
+  nav ul li a {
+    font-family: "Source Code Pro", monospace;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  nav ul li input {
+    width: 300px;
+    background-color: #222222;
+    color: white;
+    font-size: 22px;
+    font-family: "Source Code Pro", monospace;
+  }
+  
+  p {
+    color: white;
+    font-family: "Source Code Pro", monospace;
+    font-size: 22px;
+  }
+  
+  button {
+    font-family: "Source Code Pro", monospace;
+    font-size: 22px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 8px 16px;
+  }
+  div.buttons {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 10px 0px;
+  }
+  
+  div.welcome {
+    padding: 300px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .secret-template {
+    width: 60vw;
+    background-color: #222222;
+  }
+  
+  #secret-image {
+    width: 60vw;
+    mix-blend-mode: color-dodge;
+  }
+  
+  #secret-text {
+    width: 60vw;
+  }
+  
+  div.note-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #note-editor-title,
+  #note-editor-body,
+  ul li input {
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+  }
+  
+  #note-editor-image {
+    width: 20vw;
+    padding: 20px;
+  }
+  
+  #note-editor-title {
+    background-color: #222222;
+    width: 40vw;
+    margin: 10px 0px;
+    color: white;
+    font-size: 32px;
+    font-family: "Source Code Pro", monospace;
+  }
+  
+  #note-editor-body {
+    background-color: #222222;
+    width: 80vw;
+    color: white;
+    font-size: 22px;
+    font-family: "Source Code Pro", monospace;
+  }
+  
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+  }
+  
+  footer p {
+    font-size: 12px;
+  }
+
+/* 
+- make all secrets hover states 
+- adjust gif in background
+- align all images and text
+*/
