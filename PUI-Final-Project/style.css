@@ -229,7 +229,12 @@ body {
   footer p {
     font-size: 12px;
   }
-
+label{
+  width:100%;
+}
+textarea{
+  width: 100%;
+}
   .circle { 
     border-radius:50%;
     position:absolute;
@@ -239,9 +244,3 @@ body {
     height:200px;
     position:relative;
 }
-
-/* 
-- make all secrets hover states 
-- adjust gif in background
-- align all images and text
-*/
