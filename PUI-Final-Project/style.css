@@ -4,7 +4,15 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  
+
+  canvas{
+    position:absolute;
+    width: 100vw;
+    left:0;
+    top:0;
+    z-index:-1;
+  }
+
   nav {
     display:block;
     width: 100%;
@@ -26,6 +34,15 @@ body {
     font-size: 22px;
   }
   
+ .underline:hover {
+    text-decoration: underline;
+    transition: 100ms ease-in-out;
+  }
+
+#selected{
+  text-decoration: underline;
+}
+
   nav ul li input {
     width: 300px;
     background-color: #222222;
@@ -49,6 +66,12 @@ body {
     border-radius: 4px;
     padding: 8px 16px;
   }
+
+  button:hover{
+    background-color: rgb(38, 38, 38);
+    transition: 100ms ease-in-out;
+  }
+
   div.buttons {
     width: 100%;
     margin: 0px;
@@ -57,6 +80,7 @@ body {
     justify-content: flex-end;
     margin: 10px 0px;
   }
+
   
   div.welcome {
     padding: 300px 60px;
@@ -64,28 +88,52 @@ body {
     flex-direction: row;
     justify-content: flex-end;
   }
+
+  div#content{
+    position: relative;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
   
+  div.reveal{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    padding: 100px 0px;
+    align-items: center;
+  }
+
   div.secret-template {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 60vw;
-    background-color: #222222;
+    width: 100%;
+    position: relative;
+    overflow:auto;
   }
   
   #secret-image {
-    width: 60vw;
-    mix-blend-mode: color-dodge;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
   }
 
   #secret-text {
-    width: 60vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     opacity: 0%;
+    background:rgba(0, 0, 0, 0.4);
     transition: 200ms ease-in-out;
   }
   
   #secret-text:hover {
-    width: 60vw;
+    width: 100%;
     opacity: 100%;
     transition: 200ms ease-in-out;
   }
@@ -109,18 +157,19 @@ body {
     top: 56px; /* change this value to one that suits you */
 }
 
-  div.note-editor {
+  div#note-editor {
     display: flex;
     width: 80vw;
     flex-direction: column;
     align-items: center;
   }
   
-  div.confirmation{
+  div#confirmation{
     display: flex;
-    width: 80vw;
+    width: 40vw;
     flex-direction: column;
     align-items: center;
+    padding: 100px 0px;
   }
 
   form {
@@ -137,8 +186,8 @@ body {
     border-radius: 4px;
   }
   
-  #note-editor-image {
-    width: 20vw;
+  div.note-editor-img {
+    width: 15vw;
     padding: 20px;
   }
   

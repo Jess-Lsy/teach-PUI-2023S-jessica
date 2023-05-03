@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-
+    <script src="js/app.js"></script>
     <title>Record</title>
   </head>
   <body>
@@ -16,12 +16,12 @@
       <ul>
         <li><a href="index.html" class="underline">Home</a></li>
         <li><a href="explore.html" class="underline">Explore</a></li>
-        <li><a href="record.html" class="underline">Record</a></li>
+        <li><a href="record.html" class="underline" id="selected">Record</a></li>
       </ul>
     </nav>
-    <div class="note-editor">
+    <div id="note-editor">
         <div class="note-editor-img">
-            <img id="note-editor-image" src="img/gaurdian.png"></img>
+            <img src="img/gaurdian.png"></img>
         </div>
         <form>
           <input id="note-editor-title" placeholder="Add Title"
@@ -30,13 +30,15 @@
             rows="15" maxlength="1000"></textarea>
         </form>
         <div class="buttons">
-        <button type="button">Done</button>
+        <button type="button" onclick="showDiv()">Done</button>
         </div>
     </div>
-    <div class="confirmation">
+    <div id="confirmation" style="display:none;">
       <p>Submitted! Come back in a couple weeks to find your response in the Explore Section. </p>
       <div class="buttons">
-        <button type="button">Got it!</button>
+        <a href=explore.html>
+          <button type="button">Got it!</button>
+        </a>
       </div>
     </div>
     <footer>

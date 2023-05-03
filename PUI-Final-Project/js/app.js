@@ -1,16 +1,3 @@
-var newCircle = $("<div />")
-var d = Math.floor(Math.random() * maxDiam);
-newCircle.addClass("circle");
-
-newCircle.css({
-    width: d,
-    height: d,
-    left: Math.random() * Math.max($("#container").width() - d, 0),
-    top: Math.random() * Math.max($("#container").height - d, 0),
-    backgroundColor: getRandomColor()
-});
-$("#container").append(newCircle);
-
 class Entree {
     constructor(tag, text) {
       this.entreeTag = tag;
@@ -86,3 +73,7 @@ class Entree {
     retrieveFromLocalStorage();
   }
   
+  function showDiv() {
+    document.getElementById('confirmation').style.display = "block";
+    document.getElementById('note-editor').style.display="none";
+ }

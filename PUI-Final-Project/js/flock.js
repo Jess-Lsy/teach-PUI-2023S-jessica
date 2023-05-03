@@ -8,8 +8,10 @@
 var numBoids = 100;
 var boids = [];
 
+const canvas = document.getElementById('boids');
+const c = canvas.getContext('2d');
 /**
- * Create the canvas and create boids randomly.
+ * Create the canvas and create boids randomly.s
  */
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -103,7 +105,7 @@ var Boid = function (x, y) {
   this.diameter = 15;
   this.position = createVector(x, y);
   this.velocity = createVector(0);
-  this.r = 1;
+  this.r = 2;
 
   this.draw = function () {
     // Nice idea from Dan Shiffman to prevent over acceleration

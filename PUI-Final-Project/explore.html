@@ -10,122 +10,107 @@
       href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
       rel="stylesheet"
     />
-    <title>Explore</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/p5.min.js"></script>
     <script src="js/flock.js"></script>
     <script src="js/p5.min.js"></script>
+    <title>Explore</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav>
       <ul>
+        <audio controls autoplay>
+          <source src="sharing-prosperity.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
         <li><input type="text" placeholder="Search.." /></li>
-        <li><a href="index.html" class="underline">Home</a></li>
-        <li><a href="explore.html" class="underline">Explore</a></li>
+        <li><a href="index.html" class="underline" >Home</a></li>
+        <li><a href="explore.html" class="underline"id="selected">Explore</a></li>
         <li><a href="record.html" class="underline">Record</a></li>
       </ul>
     </nav>
-    <div>
-        <img id="1-dot" class="dots" src="img/dot.png"></img>
-        <img id="2-dot" class="dots" src="img/dot.png"></img>
-        <img id="3-dot" class="dots" src="img/dot.png"></img>
-        <img id="4-dot" class="dots" src="img/dot.png"></img>
-        <img id="5-dot" class="dots" src="img/dot.png"></img>
-        <img id="6-dot" class="dots" src="img/dot.png"></img>
-        <img id="7-dot" class="dots" src="img/dot.png"></img>
-        <img id="8-dot" class="dots" src="img/dot.png"></img>
-        <img id="9-dot" class="dots" src="img/dot.png"></img>
-        <img id="10-dot" class="dots" src="img/dot.png"></img>
-        <img id="11-dot" class="dots" src="img/dot.png"></img>
-        <img id="12-dot" class="dots" src="img/dot.png"></img>
-        <img id="13-dot" class="dots" src="img/dot.png"></img>
-        <img id="14-dot" class="dots" src="img/dot.png"></img>
-        <img id="15-dot" class="dots" src="img/dot.png"></img>
-        <img id="16-dot" class="dots" src="img/dot.png"></img>
-        <img id="17-dot" class="dots" src="img/dot.png"></img>
-        <img id="18-dot" class="dots" src="img/dot.png"></img>
-        <img id="20-dot" class="dots" src="img/dot.png"></img>
-    </div>
-    </div>
+    <canvas width=windowWidth height=windowHeight></canvas>
     <div class="reveal">
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/1-text.png"></img>
       <img id="secret-image" src="img/secrets/1-image.png"></img>
+      <img id="secret-text" src="img/secrets/1-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/2-text.png"></img>
       <img id="secret-image" src="img/secrets/2-image.png"></img>
+      <img id="secret-text" src="img/secrets/2-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/3-text.png"></img>
       <img id="secret-image" src="img/secrets/3-image.png"></img>
+      <img id="secret-text" src="img/secrets/3-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/4-text.png"></img>
       <img id="secret-image" src="img/secrets/4-image.png"></img>
+      <img id="secret-text" src="img/secrets/4-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/5-text.png"></img>
       <img id="secret-image" src="img/secrets/5-image.png"></img>
+      <img id="secret-text" src="img/secrets/5-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/6-text.png"></img>
       <img id="secret-image" src="img/secrets/6-image.png"></img>
+      <img id="secret-text" src="img/secrets/6-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/7-text.png"></img>
       <img id="secret-image" src="img/secrets/7-image.png"></img>
+      <img id="secret-text" src="img/secrets/7-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/8-text.png"></img>
       <img id="secret-image" src="img/secrets/8-image.png"></img>
+      <img id="secret-text" src="img/secrets/8-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/9-text.png"></img>
       <img id="secret-image" src="img/secrets/9-image.png"></img>
+      <img id="secret-text" src="img/secrets/9-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/10-text.png"></img>
       <img id="secret-image" src="img/secrets/10-image.png"></img>
+      <img id="secret-text" src="img/secrets/10-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/11-text.png"></img>
       <img id="secret-image" src="img/secrets/11-image.png"></img>
+      <img id="secret-text" src="img/secrets/11-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/12-text.png"></img>
       <img id="secret-image" src="img/secrets/12-image.png"></img>
+      <img id="secret-text" src="img/secrets/12-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/13-text.png"></img>
       <img id="secret-image" src="img/secrets/13-image.png"></img>
+      <img id="secret-text" src="img/secrets/13-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/14-text.png"></img>
       <img id="secret-image" src="img/secrets/14-image.png"></img>
+      <img id="secret-text" src="img/secrets/14-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/15-text.png"></img>
       <img id="secret-image" src="img/secrets/15-image.png"></img>
+      <img id="secret-text" src="img/secrets/15-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/16-text.png"></img>
       <img id="secret-image" src="img/secrets/16-image.png"></img>
+      <img id="secret-text" src="img/secrets/16-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/17-text.png"></img>
       <img id="secret-image" src="img/secrets/17-image.png"></img>
+      <img id="secret-text" src="img/secrets/17-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/18-text.png"></img>
       <img id="secret-image" src="img/secrets/18-image.png"></img>
+      <img id="secret-text" src="img/secrets/18-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/19-text.png"></img>
       <img id="secret-image" src="img/secrets/19-image.png"></img>
+      <img id="secret-text" src="img/secrets/19-text.png"></img>
     </div>
     <div class="secret-template">
-      <img id="secret-text" src="img/secrets/20-text.png"></img>
       <img id="secret-image" src="img/secrets/20-image.png"></img>
+      <img id="secret-text" src="img/secrets/20-text.png"></img>
+    </div>
     </div>
     </div>
     <footer>
