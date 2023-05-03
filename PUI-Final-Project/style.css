@@ -1,7 +1,15 @@
 body {
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
+  nav {
+    display:block;
+    width: 100%;
+    align-items: end;
+  }
   nav ul {
     display: flex;
     flex-direction: row;
@@ -42,7 +50,8 @@ body {
     padding: 8px 16px;
   }
   div.buttons {
-    width: 80vw;
+    width: 100%;
+    margin: 0px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -56,7 +65,10 @@ body {
     justify-content: flex-end;
   }
   
-  .secret-template {
+  div.secret-template {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     width: 60vw;
     background-color: #222222;
   }
@@ -65,20 +77,56 @@ body {
     width: 60vw;
     mix-blend-mode: color-dodge;
   }
-  
+
   #secret-text {
     width: 60vw;
+    opacity: 0%;
+    transition: 200ms ease-in-out;
   }
   
+  #secret-text:hover {
+    width: 60vw;
+    opacity: 100%;
+    transition: 200ms ease-in-out;
+  }
+
+  img.dots{
+    width: 50px;
+  }
+
+  img.dots:hover {
+    opacity: 50%;
+  }
+
+  /* img#1-dot{
+
+  } */
+  img#1-dot:hover:after {
+    content: url(img/secrets/2-image.png); /* no need for qoutes */
+    display: block;
+    position: absolute;
+    left: 123px; /* change this value to one that suits you */
+    top: 56px; /* change this value to one that suits you */
+}
+
   div.note-editor {
     display: flex;
+    width: 80vw;
     flex-direction: column;
     align-items: center;
   }
   
+  div.confirmation{
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
   form {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   
   #note-editor-title,
@@ -105,7 +153,6 @@ body {
   
   #note-editor-body {
     background-color: #222222;
-    width: 80vw;
     color: white;
     font-size: 22px;
     font-family: "Source Code Pro", monospace;
@@ -122,6 +169,16 @@ body {
   footer p {
     font-size: 12px;
   }
+
+  .circle { 
+    border-radius:50%;
+    position:absolute;
+}
+  #container {
+    width:500px;
+    height:200px;
+    position:relative;
+}
 
 /* 
 - make all secrets hover states 
