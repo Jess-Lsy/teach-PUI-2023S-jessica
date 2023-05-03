@@ -8,8 +8,6 @@
 var numBoids = 100;
 var boids = [];
 
-const canvas = document.getElementById('boids');
-const c = canvas.getContext('2d');
 /**
  * Create the canvas and create boids randomly.s
  */
